@@ -34,12 +34,14 @@ public class Main {
 
         int [] inputArray2 = {17000, 18000, 5500, 69000, 22000};
         double [] outputArray2 = new double [inputArray2.length];
-        double tax = 0.13;
+        int index = 0;
 
-        for (int i = 0; i < inputArray2.length; i++) {
-            outputArray2[i] = inputArray2[i] * tax;
+        for (int salary : inputArray2) {
+            double tax = salary * 0.13;
+            outputArray2[index] = tax;
+            index++;
         }
-        System.out.println("inputArray2 " + Arrays.toString(inputArray2));
+        System.out.print("inputArray2 " + Arrays.toString(inputArray2));
         System.out.println("outputArray2 " + Arrays.toString(outputArray2));
         System.out.println();
 
