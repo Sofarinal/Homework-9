@@ -51,10 +51,11 @@ public class Main {
 
         int [] inputArray3 = {3000, 6500, 7400, 4800, 3600};
         boolean [] outputArray3 = new boolean[inputArray3.length];
-        int bonus = 5000;
+        int i = 0;
 
-        for (int i = 0; i < inputArray3.length; i++) {
-            outputArray3[i] = inputArray3[i] > bonus;
+        for (int bonus : inputArray3) {
+            outputArray3[i] = (bonus > 5000);
+            i++;
         }
         System.out.println("inputArray3 " + Arrays.toString(inputArray3));
         System.out.println("outputArray3 " + Arrays.toString(outputArray3));
